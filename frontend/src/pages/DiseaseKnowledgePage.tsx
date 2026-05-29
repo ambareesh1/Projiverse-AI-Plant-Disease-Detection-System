@@ -1,0 +1,2 @@
+import { DiseaseCard } from '../components/dashboard/DiseaseCard'; import { diseases } from '../data/mockData';
+export function DiseaseKnowledgePage(){return <main className="min-h-screen bg-slate-50 p-4"><div className="mx-auto max-w-7xl py-8"><h1 className="text-3xl font-bold">Disease Knowledge Base</h1><p className="mt-2 text-slate-600">RAG-ready markdown knowledge base with symptoms, causes, treatment, prevention, and disclaimers.</p><div className="mt-8 grid gap-5 md:grid-cols-3">{diseases.map(d=><DiseaseCard key={d.id} d={d}/>)}</div></div></main>}
