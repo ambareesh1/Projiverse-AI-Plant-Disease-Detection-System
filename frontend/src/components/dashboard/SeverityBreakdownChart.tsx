@@ -1,0 +1,2 @@
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+export function SeverityBreakdownChart({data}:{data:any[]}){return <div className="h-72 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"><ResponsiveContainer width="100%" height="100%"><BarChart data={data}><CartesianGrid strokeDasharray="3 3"/><XAxis dataKey="name"/><YAxis/><Tooltip/><Bar dataKey="value" fill="#D97706" radius={[8,8,0,0]}/></BarChart></ResponsiveContainer></div>}

@@ -1,0 +1,2 @@
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
+export function PredictionTrendChart({data}:{data:any[]}){return <div className="h-72 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"><ResponsiveContainer width="100%" height="100%"><LineChart data={data}><CartesianGrid strokeDasharray="3 3"/><XAxis dataKey="day"/><YAxis/><Tooltip/><Line dataKey="predictions" stroke="#16A34A" strokeWidth={3}/></LineChart></ResponsiveContainer></div>}

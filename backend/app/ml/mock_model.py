@@ -1,0 +1,7 @@
+import random
+DISEASES={
+'Tomato':[('Tomato Leaf Blight','Medium',['Fungal infection','High humidity','Poor air circulation'])], 'Potato':[('Potato Late Blight','High',['Cool wet weather','Infected seed tubers'])], 'Corn':[('Corn Leaf Spot','Medium',['Residue-borne fungi','High humidity'])], 'Rice':[('Rice Blast','High',['Fungal spores','Excess nitrogen'])], 'Wheat':[('Wheat Rust','Medium',['Wind-spread spores','Susceptible variety'])], 'Grape':[('Grape Black Rot','High',['Wet canopy','Fungal overwintering'])], 'Apple':[('Apple Scab','Medium',['Wet spring','Fallen infected leaves'])], 'Cotton':[('Cotton Leaf Curl','Critical',['Viral infection','Whitefly vector'])]}
+def predict(crop_type:str):
+    name,severity,causes=random.choice(DISEASES.get(crop_type, [('Healthy Leaf','Low',['No major disease pattern detected'])]))
+    confidence=round(random.uniform(78,96),1) if severity!='Low' else round(random.uniform(88,98),1)
+    return {'diseaseName':name,'confidence':confidence,'severity':severity,'possibleCauses':causes,'treatmentSuggestions':['Remove infected leaves','Avoid overhead watering','Use recommended treatment after expert consultation'],'preventionTips':['Maintain plant spacing','Use disease-free seeds','Monitor leaves regularly'],'aiExplanation':f'The uploaded leaf shows visual symptoms similar to {name}. The mock AI service detected color, spot, and texture patterns for educational advisory use.'}

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+venv/
+__pycache__/
+*.pyc
+plantcare.db
+uploads/*
+!uploads/.gitkeep
+
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
