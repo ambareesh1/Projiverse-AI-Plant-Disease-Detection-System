@@ -1,0 +1,1 @@
+import type { ReactNode } from 'react'; import { Sidebar } from './Sidebar'; import { Topbar } from './Topbar'; export function DashboardShell({title,children}:{title:string;children:ReactNode}){return <div className="min-h-screen bg-slate-50"><Sidebar/><Topbar title={title}/><main className="mx-auto max-w-7xl p-4 lg:ml-64 lg:p-8">{children}</main></div>}

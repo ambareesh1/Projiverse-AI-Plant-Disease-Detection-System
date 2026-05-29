@@ -1,0 +1,2 @@
+import { ResponsiveContainer, PieChart, Pie, Tooltip, Cell, Legend } from 'recharts';
+export function DiseaseDistributionChart({data}:{data:any[]}){return <div className="h-72 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"><ResponsiveContainer width="100%" height="100%"><PieChart><Pie data={data} dataKey="value" nameKey="name" outerRadius={90}>{data.map((_:any,i:number)=><Cell key={i} fill={["#16A34A","#0284C7","#D97706","#84CC16","#22C55E","#92400E"][i%6]}/>)}</Pie><Tooltip/><Legend/></PieChart></ResponsiveContainer></div>}

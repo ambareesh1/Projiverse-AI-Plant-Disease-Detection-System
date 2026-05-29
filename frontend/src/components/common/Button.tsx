@@ -1,0 +1,3 @@
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
+const styles={primary:'bg-green-600 hover:bg-green-700 text-white shadow-sm focus:ring-green-500',secondary:'bg-white text-green-700 border border-green-200 hover:bg-green-50',ghost:'text-slate-700 hover:text-green-700 hover:bg-green-50'};
+export function Button({children,variant='primary',className='',...props}:ButtonHTMLAttributes<HTMLButtonElement>&{variant?:keyof typeof styles;children:ReactNode}){return <button className={`rounded-xl px-5 py-3 font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 ${styles[variant]} ${className}`} {...props}>{children}</button>}
